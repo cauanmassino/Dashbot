@@ -1,0 +1,110 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBot</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Barra lateral -->
+            <aside class="col-md-3 col-lg-2 sidebar bg-dark text-white p-4">
+                <h2 class="text-center">DashBot</h2>
+                <nav>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Painel Geral</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Fechamento</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Fluig</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Fluig</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Fluig</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Fluig</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Fluig</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Fluig</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Fluig</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Fluig</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Fluig</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Fluig</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Fluig</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Fluig</a></li>
+                        <!-- Adicione outros bots aqui conforme necessário -->
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Conteúdo principal -->
+            <main class="col-md-9 col-lg-10 main-content p-4">
+                <header>
+                    <h1 class="display-4">Geral</h1>
+                </header>
+
+                <!-- Seção dos cards de status dos robôs -->
+                <section class="status-robots">
+                    <h2 class="h4 text-center">Status Robôs</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <!-- Título do card com bolinha colorida -->
+                            <h3 class="card-title"><span class="dot green-dot"></span>Ativo</h3>
+                            <div class="card text-white bg-success mb-3">
+                                <div class="card-body">
+                                    <h3 id="active-count">20 <span class="icon-positive">✔️</span></h3>
+                                    <div class="separator"></div>
+                                    <p><i class="fas fa-clock"></i> Última atualização: <span class="last-updated">01/11/2024 14:30</span></p>
+                                </div>
+                            </div>
+                            <div class="list-card">
+                                <ul class="list-group" id="active-robots">
+                                    <li class="list-group-item">Robô 1</li>
+                                    <li class="list-group-item">Robô 2</li>
+                                    <li class="list-group-item">Robô 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h3 class="card-title"><span class="dot red-dot"></span>Sem Resposta</h3>
+                            <div class="card text-white bg-danger mb-3">
+                                <div class="card-body">
+                                    <h3 id="unresponsive-count">3</h3>
+                                    <div class="separator"></div>
+                                    <p><i class="fas fa-clock"></i> Última atualização: <span class="last-updated">01/11/2024 14:30</span></p>
+                                </div>
+                            </div>
+                            <div class="list-card">
+                                <ul class="list-group" id="unresponsive-robots">
+                                    <li class="list-group-item">Robô 1</li>
+                                    <li class="list-group-item">Robô 2</li>
+                                    <li class="list-group-item">Robô 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h3 class="card-title"><span class="dot gray-dot"></span>Parados</h3>
+                            <div class="card text-white bg-secondary mb-3">
+                                <div class="card-body">
+                                    <h3 id="stopped-count">3</h3>
+                                    <div class="separator"></div>
+                                    <p><i class="fas fa-clock"></i> Última atualização: <span class="last-updated">01/11/2024 14:30</span></p>
+                                </div>
+                            </div>
+                            <div class="list-card">
+                                <ul class="list-group" id="stopped-robots">
+                                    <li class="list-group-item">Robô 1</li>
+                                    <li class="list-group-item">Robô 2</li>
+                                    <li class="list-group-item">Robô 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

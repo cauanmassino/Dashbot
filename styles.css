@@ -1,0 +1,190 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f9;
+}
+
+.container-fluid {
+    display: flex;
+    width: 100%;
+}
+
+/* Barra lateral */
+.sidebar {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.sidebar .nav-item {
+    margin: 5px 0;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .nav-link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.sidebar .nav-link:hover {
+    color: #3498db;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Conteúdo principal */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Título do card com bolinha colorida */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: left; /* Alinhado à esquerda */
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo para as bolinhas de status */
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.green-dot { background-color: #2ecc71; }
+.red-dot { background-color: #e74c3c; }
+.gray-dot { background-color: #95a5a6; }
+
+/* Seção Status Robôs */
+.status-robots {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.status-robots h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Estilo do card */
+.card {
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    transition: transform 0.3s;
+    min-height: 200px; /* Define uma altura mínima para manter o padrão */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    color: #fff;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+/* Icone positivo verde translúcido */
+.icon-positive {
+    color: rgba(46, 204, 113, 0.5);
+    font-size: 36px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .last-updated {
+    font-weight: normal;
+}
+
+/* Lista de robôs estilizada */
+.list-card ul {
+    list-style: none;
+    padding: 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fafafa;
+    width: 100%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.list-card ul li {
+    font-size: 14px;
+    color: #555;
+    padding: 10px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.list-card ul li:last-child {
+    border-bottom: none;
+}
+
+.list-card ul li:hover {
+    background-color: #f0f0f5;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Responsividade para os cards */
+@media (max-width: 768px) {
+    .status-robots .col-md-4 {
+        flex: 1 1 100%; /* Cards ocupam a largura total em telas menores */
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .status-robots .col-md-4 {
+        flex: 1; /* Ajusta os cards para o mesmo tamanho em telas médias e grandes */
+        max-width: 32%; /* Define o tamanho para que todos fiquem alinhados */
+    }
+}
