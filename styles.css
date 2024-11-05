@@ -20,7 +20,7 @@ body {
 /* Barra lateral */
 .sidebar {
     background-color: #2c3e50;
-    color: #fff;
+    color: #ffffff;
     padding: 20px;
     height: 100vh;
     overflow-y: auto;
@@ -38,9 +38,14 @@ body {
 }
 
 .sidebar .nav-link {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     transition: color 0.3s, background-color 0.3s;
+}
+
+.sidebar .nav-link.active {
+    color: #3498db;
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 .sidebar .nav-link:hover {
@@ -63,7 +68,7 @@ header h1 {
 .card-title {
     font-size: 1.25rem;
     font-weight: bold;
-    text-align: left; /* Alinhado à esquerda */
+    text-align: left;
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
@@ -84,7 +89,7 @@ header h1 {
 /* Seção Status Robôs */
 .status-robots {
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd;
     border-radius: 8px;
     background-color: #ffffff;
 }
@@ -96,44 +101,70 @@ header h1 {
     text-align: center;
 }
 
-/* Estilo do card */
+/* Card base */
 .card {
+    position: relative; /* Necessário para posicionamento do ícone */
     padding: 20px;
-    border-radius: 8px;
-    color: #fff;
+    border-radius: 12px;
     text-align: center;
-    transition: transform 0.3s;
-    min-height: 200px; /* Define uma altura mínima para manter o padrão */
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+    max-width: 300px;
 }
 
 .card:hover {
     transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Card "Sem Resposta" */
+.card.bg-danger {
+    background: linear-gradient(135deg, #9935dc, #8623c8); /* Gradiente vermelho */
+    color: #ff0707 !important; /* Texto amarelo */
+}
+
+/* Card "Parados" */
+.card.bg-secondary {
+    background: linear-gradient(135deg, #6c757d, #5a6268); /* Gradiente cinza */
+    color: #17a2b8 !important; /* Texto ciano */
+}
+
+/* Ícone posicionado no canto superior direito para "Ativos"*/
+.icon-right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #41ff07;
+}
+
+.card.bg-danger .icon-right {
+    color: #ff0707; /* Ícone Vermelho para "Sem Resposta" */
+}
+
+.card.bg-secondary .icon-right {
+    color: #505050; /* Ícone cinza para "Parados" */
+}
+
+/* Estilo para o número grande no card */
 .card h3 {
-    color: #fff;
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-/* Icone positivo verde translúcido */
-.icon-positive {
-    color: rgba(46, 204, 113, 0.5);
-    font-size: 36px;
-    margin-left: 8px;
-    vertical-align: middle;
-}
-
-.separator {
-    width: 100%;
-    height: 1px;
-    background-color: #fff;
+    font-size: 5em;
     margin: 10px 0;
 }
 
+/* Linha separadora */
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5); /* Linha de cor clara */
+    margin: 10px 0;
+}
+
+/* Estilo do texto de atualização */
 .card p {
     font-size: 14px;
     display: flex;
@@ -141,50 +172,50 @@ header h1 {
     justify-content: center;
 }
 
-.card .last-updated {
-    font-weight: normal;
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Lista de robôs estilizada */
-.list-card ul {
-    list-style: none;
-    padding: 0;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    background-color: #fafafa;
-    width: 100%;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+/* Estilos individuais para cada tipo de card */
+.card.bg-success {
+    background: linear-gradient(135deg, #ffffff, #f7f7f7);
+    border: 4px solid #03c70d; /* Borda verde */
+    color: #0ca306f8 !important; /* Texto azul */
 }
 
-.list-card ul li {
-    font-size: 14px;
-    color: #555;
-    padding: 10px 15px;
-    border-bottom: 1px solid #e0e0e0;
-    transition: background-color 0.3s, color 0.3s;
+.card.bg-danger {
+    background: linear-gradient(135deg, #ffffff, #f7f7f7);
+    border: 4px solid #ec0404; /* Borda verde */
+    color: #ff0000 !important; /* Texto azul */
 }
 
-.list-card ul li:last-child {
-    border-bottom: none;
+.card.bg-secondary {
+    background: linear-gradient(135deg, #ffffff, #f7f7f7);
+    border: 4px solid #8b8b8b; /* Borda verde */
+    color: #8b8b8b !important; /* Texto azul */
+
+/* Estilo para o número grande no card */
+.card h3 {
+    font-size: 3em; /* Aumenta o tamanho do número */
+    margin: 10px 0;
 }
 
-.list-card ul li:hover {
-    background-color: #f0f0f5;
-    color: #333;
-    cursor: pointer;
+/* Layout responsivo para os cards */
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-/* Responsividade para os cards */
 @media (max-width: 768px) {
-    .status-robots .col-md-4 {
-        flex: 1 1 100%; /* Cards ocupam a largura total em telas menores */
-        margin-bottom: 20px;
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
     }
-}
-
-@media (min-width: 768px) {
-    .status-robots .col-md-4 {
-        flex: 1; /* Ajusta os cards para o mesmo tamanho em telas médias e grandes */
-        max-width: 32%; /* Define o tamanho para que todos fiquem alinhados */
+    .card {
+        max-width: 90%;
     }
 }

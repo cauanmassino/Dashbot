@@ -48,12 +48,16 @@
                         <div class="col-md-4">
                             <!-- Título do card com bolinha colorida -->
                             <h3 class="card-title"><span class="dot green-dot"></span>Ativo</h3>
-                            <div class="card text-white bg-success mb-3">
-                                <div class="card-body">
-                                    <h3 id="active-count">20 <span class="icon-positive">✔️</span></h3>
-                                    <div class="separator"></div>
-                                    <p><i class="fas fa-clock"></i> Última atualização: <span class="last-updated">01/11/2024 14:30</span></p>
-                                </div>
+                            <div class="card bg-success">
+                                <!-- Ícone posicionado à direita -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-circle icon-right" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                    <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                                </svg>
+                            
+                                <h3><b>20</b></h3>
+                                <div class="separator"></div>
+                                <p><i class="fas fa-clock"></i> Última atualização: <span class="last-updated">01/11/2024 14:30</span></p>
                             </div>
                             <div class="list-card">
                                 <ul class="list-group" id="active-robots">
@@ -65,13 +69,16 @@
                         </div>
                         <div class="col-md-4">
                             <h3 class="card-title"><span class="dot red-dot"></span>Sem Resposta</h3>
-                            <div class="card text-white bg-danger mb-3">
-                                <div class="card-body">
-                                    <h3 id="unresponsive-count">3</h3>
-                                    <div class="separator"></div>
-                                    <p><i class="fas fa-clock"></i> Última atualização: <span class="last-updated">01/11/2024 14:30</span></p>
-                                </div>
-                            </div>
+                            <!-- Card "Sem Resposta" -->
+<div class="card bg-danger">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-exclamation-circle icon-right" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+        <path d="M7.001 5h2v5H7zM7 11h2v2H7z"/>
+    </svg>
+    <h3><b>4</b></h3>
+    <div class="separator"></div>
+    <p><i class="fas fa-clock"></i> Última atualização: <span class="last-updated">01/11/2024 14:30</span></p>
+</div>
                             <div class="list-card">
                                 <ul class="list-group" id="unresponsive-robots">
                                     <li class="list-group-item">Robô 1</li>
@@ -82,13 +89,16 @@
                         </div>
                         <div class="col-md-4">
                             <h3 class="card-title"><span class="dot gray-dot"></span>Parados</h3>
-                            <div class="card text-white bg-secondary mb-3">
-                                <div class="card-body">
-                                    <h3 id="stopped-count">3</h3>
-                                    <div class="separator"></div>
-                                    <p><i class="fas fa-clock"></i> Última atualização: <span class="last-updated">01/11/2024 14:30</span></p>
-                                </div>
-                            </div>
+                            <!-- Card "Parados" -->
+<div class="card bg-secondary">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pause-circle icon-right" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+        <path d="M5.5 6.5v3h1v-3h-1zM9.5 6.5v3h1v-3h-1z"/>
+    </svg>
+    <h3><b>3</b></h3>
+    <div class="separator"></div>
+    <p><i class="fas fa-clock"></i> Última atualização: <span class="last-updated">01/11/2024 14:30</span></p>
+</div>
                             <div class="list-card">
                                 <ul class="list-group" id="stopped-robots">
                                     <li class="list-group-item">Robô 1</li>

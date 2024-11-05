@@ -4,7 +4,7 @@ function atualizarHorario() {
     const formattedTime = now.toLocaleTimeString("pt-BR", { hour: '2-digit', minute: '2-digit' });
     
     document.querySelectorAll('.last-updated').forEach(el => {
-        el.textContent = `${formattedDate} ${formattedTime}`;
+        el.textContent = ${formattedDate} ${formattedTime};
     });
 }
 
@@ -15,7 +15,7 @@ function atualizarDados() {
     const stoppedCount = Math.floor(Math.random() * 5); // Número aleatório entre 0 e 5
 
     // Atualiza contagem
-    document.getElementById('active-count').textContent = `${activeCount} ✔️`;
+    document.getElementById('active-count').textContent = ${activeCount} ✔;
     document.getElementById('unresponsive-count').textContent = unresponsiveCount;
     document.getElementById('stopped-count').textContent = stoppedCount;
 
@@ -25,9 +25,9 @@ function atualizarDados() {
     const stoppedRobots = ['Robô 9', 'Robô 10'];
 
     // Atualiza listas de robôs
-    document.getElementById('active-robots').innerHTML = activeRobots.map(robot => `<li class="list-group-item">${robot}</li>`).join('');
-    document.getElementById('unresponsive-robots').innerHTML = unresponsiveRobots.map(robot => `<li class="list-group-item">${robot}</li>`).join('');
-    document.getElementById('stopped-robots').innerHTML = stoppedRobots.map(robot => `<li class="list-group-item">${robot}</li>`).join('');
+    document.getElementById('active-robots').innerHTML = activeRobots.map(robot => <li class="list-group-item">${robot}</li>).join('');
+    document.getElementById('unresponsive-robots').innerHTML = unresponsiveRobots.map(robot => <li class="list-group-item">${robot}</li>).join('');
+    document.getElementById('stopped-robots').innerHTML = stoppedRobots.map(robot => <li class="list-group-item">${robot}</li>).join('');
 }
 
 // Atualiza dados a cada 60 segundos
