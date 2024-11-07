@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DashBot</title>
+    <title>DashBot bnt teste</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -14,28 +13,42 @@
 <!-- Menu Fixo no Topo -->
 <nav class="navbar navbar-expand-lg fixed-top">
     <a class="navbar-brand" href="#">
-        <i class="fas fa-robot"></i> DashBot
+        <i class="fas fa-robot"></i> DashBot teste
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 </nav>
 
-<!-- Container Principal -->
-<div class="container-fluid main-container">
+<!-- Container Principal com padding-top para evitar sobreposição -->
+<div class="container-fluid" style="padding-top: 70px;">
     <div class="row">
+            
+
         
         <!-- Barra lateral -->
-        <aside class="col-md-3 col-lg-2 sidebar">
-            <nav>
-                <ul class="nav flex-column">
-                    <li class="nav-item"><a class="nav-link active" href="#"><i class="fas fa-chart-line"></i> Painel Geral</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-coins"></i> Fechamento</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-robot"></i> Fluig</a></li>
-                    <!-- Adicione outros bots conforme necessário -->
-                </ul>
-            </nav>
-        </aside>
+<aside class="col-md-3 col-lg-2 sidebar">
+    <nav>
+        <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link active" href="#"><i class="fas fa-chart-line"></i> Painel Geral</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-coins"></i> Fechamento</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-robot"></i> Fluig</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-robot"></i> Robô 3</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-robot"></i> Robô 4</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-robot"></i> Robô 5</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-robot"></i> Robô 6</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-robot"></i> Robô 7</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-robot"></i> Robô 8</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-robot"></i> Robô 9</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-robot"></i> Robô 10</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-robot"></i> Robô 11</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-robot"></i> Robô 12</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-robot"></i> Robô 13</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-robot"></i> Robô 14</a></li>
+            <!-- Adicione outros bots aqui conforme necessário -->
+        </ul>
+    </nav>
+</aside>
 
         <!-- Conteúdo principal -->
         <main class="col-md-9 col-lg-10 main-content p-4">
@@ -43,82 +56,80 @@
                 <h1 class="display-4">Painel Geral</h1>
                 <p class="lead">Monitoramento de robôs em tempo real</p>
             </header>
-
-            <!-- Seção dos cards de status dos robôs -->
-            <section class="status-robots">
-                <h2 class="h4 text-center">Status Robôs</h2>
-                <div class="row">
-                    <!-- Card Ativo -->
-                    <div class="col-md-4">
-                        <h3 class="card-title"><span class="dot green-dot"></span>Ativo</h3>
-                        <div class="card bg-success">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-circle icon-right" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                                <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
-                            </svg>
-                            <h3><b id="active-count">20</b></h3>
-                            <div class="separator"></div>
-                            <p><i class="fas fa-clock"></i> Última atualização: <span class="last-updated">01/11/2024 14:30</span></p>
+                <!-- Seção dos cards de status dos robôs -->
+                <section class="status-robots">
+                    <h2 class="h4 text-center">Status Robôs</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <!-- Título do card com bolinha colorida -->
+                            <h3 class="card-title"><span class="dot green-dot"></span>Ativo</h3>
+                            <div class="card bg-success">
+                                <!-- Ícone posicionado à direita -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-circle icon-right" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                    <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                                </svg>
+                            
+                                <h3><b>20</b></h3>
+                                <div class="separator"></div>
+                                <p><i class="fas fa-clock"></i> Última atualização: <span class="last-updated">01/11/2024 14:30</span></p>
+                            </div>
+                            <div class="list-card">
+                                <ul class="list-group" id="active-robots">
+                                    <li class="list-group-item">Robô 1</li>
+                                    <li class="list-group-item">Robô 2</li>
+                                    <li class="list-group-item">Robô 3</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="list-card">
-                            <ul class="list-group" id="active-robots">
-                                <li class="list-group-item">Robô 1</li>
-                                <li class="list-group-item">Robô 2</li>
-                                <li class="list-group-item">Robô 3</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Card Sem Resposta -->
-                    <div class="col-md-4">
-                        <h3 class="card-title"><span class="dot red-dot"></span>Sem Resposta</h3>
-                        <div class="card bg-danger">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-exclamation-circle icon-right" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                                <path d="M7.001 5h2v5H7zM7 11h2v2H7z"/>
-                            </svg>
-                            <h3><b id="unresponsive-count">4</b></h3>
-                            <div class="separator"></div>
-                            <p><i class="fas fa-clock"></i> Última atualização: <span class="last-updated">01/11/2024 14:30</span></p>
-                        </div>
-                        <div class="list-card">
-                            <ul class="list-group" id="unresponsive-robots">
-                                <li class="list-group-item">Robô 1</li>
-                                <li class="list-group-item">Robô 2</li>
-                                <li class="list-group-item">Robô 3</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Card Parados -->
-                    <div class="col-md-4">
-                        <h3 class="card-title"><span class="dot gray-dot"></span>Parados</h3>
-                        <div class="card bg-secondary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pause-circle icon-right" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                                <path d="M5.5 6.5v3h1v-3h-1zM9.5 6.5v3h1v-3h-1z"/>
-                            </svg>
-                            <h3><b id="stopped-count">3</b></h3>
-                            <div class="separator"></div>
-                            <p><i class="fas fa-clock"></i> Última atualização: <span class="last-updated">01/11/2024 14:30</span></p>
-                        </div>
-                        <div class="list-card">
-                            <ul class="list-group" id="stopped-robots">
-                                <li class="list-group-item">Robô 1</li>
-                                <li class="list-group-item">Robô 2</li>
-                                <li class="list-group-item">Robô 3</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
+                        <div class="col-md-4">
+                            <h3 class="card-title"><span class="dot red-dot"></span>Sem Resposta</h3>
+                            <!-- Card "Sem Resposta" -->
+<div class="card bg-danger">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-exclamation-circle icon-right" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+        <path d="M7.001 5h2v5H7zM7 11h2v2H7z"/>
+    </svg>
+    <h3><b>4</b></h3>
+    <div class="separator"></div>
+    <p><i class="fas fa-clock"></i> Última atualização: <span class="last-updated">01/11/2024 14:30</span></p>
 </div>
-
-<script src="scripts.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                            <div class="list-card">
+                                <ul class="list-group" id="unresponsive-robots">
+                                    <li class="list-group-item">Robô 1</li>
+                                    <li class="list-group-item">Robô 2</li>
+                                    <li class="list-group-item">Robô 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h3 class="card-title"><span class="dot gray-dot"></span>Parados</h3>
+                            <!-- Card "Parados" -->
+<div class="card bg-secondary">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pause-circle icon-right" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+        <path d="M5.5 6.5v3h1v-3h-1zM9.5 6.5v3h1v-3h-1z"/>
+    </svg>
+    <h3><b>3</b></h3>
+    <div class="separator"></div>
+    <p><i class="fas fa-clock"></i> Última atualização: <span class="last-updated">01/11/2024 14:30</span></p>
+</div>
+                            <div class="list-card">
+                                <ul class="list-group" id="stopped-robots">
+                                    <li class="list-group-item">Robô 1</li>
+                                    <li class="list-group-item">Robô 2</li>
+                                    <li class="list-group-item">Robô 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

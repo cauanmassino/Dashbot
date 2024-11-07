@@ -1,33 +1,94 @@
+/* Reset básico */
+
+
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif; /* Aplica a fonte Open Sans */
+    display: flex;
+    height: 100vh;
     background-color: #1b1f24;
     color: #ffffff;
 }
 
+/* Menu fixo no topo */
 .navbar {
-    background-color: #282d34;
-    font-size: 1em;
+    background-color: #282d34; /* Azul para o menu fixo no topo */
+    color: #ffffff;
+    padding-top: 8px; /* Aumenta o preenchimento superior */
+    padding-bottom: 8px; /* Aumenta o preenchimento inferior */
+    font-size: 1em; /* Aumenta o tamanho da fonte */
+    font-family: 'Open Sans', sans-serif; /* Aplica a fonte Open Sans */
 }
 
 .navbar a.navbar-brand {
-    color: #ffffff;
-    font-size: 1.5em;
+    color: #ffffff; /* Cor do texto */
+    font-size: 2em; /* Aumenta o tamanho da fonte do "DashBot" */
     display: flex;
-    align-items: center;
+    align-items: center; /* Alinha o ícone e o texto no centro */
 }
 
+.navbar a.navbar-brand i {
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+    font-size: 1.1em; /* Tamanho do ícone */
+}
+
+.navbar .navbar-toggler {
+    color: #ffffff; /* Cor do texto e do ícone do menu no topo */
+}
+
+.navbar .navbar-toggler-icon {
+    filter: brightness(0) invert(1); /* Ajusta a cor do ícone para branco */
+}
+
+.container-fluid {
+    display: flex;
+    width: 100%;
+}
+
+
+/* Barra lateral */
 .sidebar {
-    background-color: #222831;
+    background-color: #222831; /* Azul escuro para o menu lateral */
     color: #d8d8d8;
     padding: 20px;
     height: 100vh;
     overflow-y: auto;
+    width: 400px; /* Aumenta a largura da barra lateral */
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.sidebar .nav-item {
+    margin: 5px 0;
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .sidebar .nav-link {
-    color: #d3d3d3;
+    color: #d3d3d3; /* Cor dos links do menu lateral */
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
 }
 
+.sidebar .nav-link.active {
+    color: #1980bb;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.sidebar .nav-link:hover {
+    background-color: rgb(9, 129, 228);
+}
+
+/* Espaçamento para o conteúdo abaixo do menu fixo */
+.container-fluid {
+    padding-top: 70px; /* Ajuste o valor conforme necessário */
+    display: flex;
+    width: 100%;
+}
+
+/* Conteúdo principal */
 .main-content {
     flex: 1;
     padding: 20px;
@@ -38,7 +99,67 @@ header h1 {
     margin-bottom: 17px;
 }
 
+/* Estilização para o título Status Robôs */
+h2.h4.text-center {
+    font-size: 1.7em; /* Aumenta um pouco o tamanho da fonte */
+    color: #d3d3d3; /* Cor cinza claro para combinar com o tema */
+    font-family: 'Open Sans', sans-serif; /* Aplica a fonte Open Sans */
+    text-transform: ; /* Transforma o texto em maiúsculas */
+    letter-spacing: 1px; /* Adiciona espaçamento entre as letras */
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Linha decorativa abaixo do título */
+h2.h4.text-center::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: #ffffff70; /* cinza para a linha decorativa */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza a linha */
+    border-radius: 2px; /* Bordas arredondadas para a linha */
+}
+
+
+/* Título do card com bolinha colorida */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo para as bolinhas de status */
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.green-dot { background-color: #2ecc71; }
+.red-dot { background-color: #e74c3c; }
+.gray-dot { background-color: #95a5a6; }
+
+/* Seção Status Robôs */
+.status-robots {
+    padding: 20px;
+    border: 0px solid #1815c2;
+    border-radius: 8px;
+    background-color: #222831;
+}
+
+
+/* Card base */
 .card {
+    position: relative; /* Necessário para posicionamento do ícone */
     padding: 20px;
     border-radius: 12px;
     text-align: center;
@@ -49,15 +170,138 @@ header h1 {
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
+    max-width: 300px;
 }
 
-.card h3 {
-    font-size: 3em;
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
 }
+
+/* Ícone posicionado no canto superior direito para "Ativos"*/
+.icon-right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ccf3c0;
+}
+
+.card.bg-danger .icon-right {
+    color: #f3cece; /* Ícone Vermelho para "Sem Resposta" */
+}
+
+.card.bg-secondary .icon-right {
+    color: #e7e5e5; /* Ícone cinza para "Parados" */
+}
+
+/* Estilo para o número grande no card */
+.card h3 {
+    font-size: 5em !important;
+    margin: 10px 0;
+    font-family: 'Open Sans', sans-serif; /* Aplica a fonte Open Sans */
+    font-weight: 700; /* Peso da fonte para destacar */
+    color: #ffffff; /* Cor branca para o número */
+}
+
+/* Linha separadora */
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(184, 7, 7, 0); /* Linha de cor clara */
+    margin: 10px 0;
+}
+
+/* Estilo do texto de atualização */
+.card p {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+   
+}
+
+/* Estilos individuais para cada tipo de card */
+.card.bg-success {
+    background: linear-gradient(135deg, #00bb28, #03740c);
+    border: 0px solid #ffffff; /* Borda verde */
+    color: #fffffff8 !important; /* Texto azul */
+}
+
+.card.bg-danger {
+    background: linear-gradient(135deg, #e92e2e, #910000);
+    border: 0px solid #ec0404; /* Borda verde */
+    color: #ffffff !important; /* Texto azul */
+}
+
+.card.bg-secondary {
+    background: linear-gradient(135deg, #9b9b9b, #5f5f5f);
+    border: 0px solid #8b8b8b; /* Borda verde */
+    color: #ffffff !important; /* Texto azul */
+}
+
+/* Estilo para o número grande no card */
+.card h3 {
+    font-size: 3em; /* Aumenta o tamanho do número */
+    margin: 10px 0;
+}
+
+/* Layout responsivo para os cards */
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Estilo moderno para .list-card */
+.list-card {
+    background-color: #1e1b29; /* Fundo azul escuro para a área do card */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Sombra sutil */
+    color: #ffffff; /* Cor do texto */
+    margin-top: 20px;
+}
+
+.list-card .list-group {
+    background-color: transparent; /* Fundo transparente para os itens */
+    border: none;
+}
+
+.list-card .list-group-item {
+    background-color: #2d2c35; /* Fundo cinza escuro para itens */
+    border: none;
+    color: #b0b0b0; /* Texto cinza claro */
+    padding: 12px 15px;
+    margin: 8px 0;
+    border-radius: 5px; /* Bordas arredondadas para cada item */
+    transition: background-color 0.3s, transform 0.3s; /* Transição suave */
+}
+
+/* Hover estilizado para os itens da lista */
+.list-card .list-group-item:hover {
+    background-color: #373056; /* Fundo azul um pouco mais claro ao passar o mouse */
+    color: #ffffff; /* Texto em branco ao passar o mouse */
+    transform: translateY(-3px); /* Eleva o item levemente */
+}
+
+/* Separador entre itens */
+.list-card .list-group-item + .list-group-item {
+    margin-top: 10px;
+}
+
 
 @media (max-width: 768px) {
     .cards-container {
         flex-direction: column;
-        align-items: center;
+        align-items: center;
+    }
+    .card {
+        max-width: 90%;
     }
 }
