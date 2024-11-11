@@ -1,11 +1,10 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DashBot - Robô 1</title>
-    <link rel="stylesheet" href="stylebots.css">
+    <title>DashBot Bot 12</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylebots.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -14,45 +13,98 @@
 <!-- Menu Fixo no Topo -->
 <nav class="navbar navbar-expand-lg fixed-top">
     <a class="navbar-brand" href="../index.html">
-        <i class="fas fa-robot"></i> DashBot
+        <i class="fas fa-robot"></i> Dashbot
     </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 </nav>
 
+<!-- Container Principal com padding-top para evitar sobreposição -->
 <div class="container-fluid" style="padding-top: 70px;">
     <div class="row">
+            
+
+        
         <!-- Barra lateral -->
-        <aside class="col-md-3 col-lg-2 sidebar">
-            <nav>
-                <ul class="nav flex-column">
-                    <li class="nav-item"><a class="nav-link" href="../index.html"><i class="fas fa-chart-line"></i> Painel Geral</a></li>
-                    <!-- Links para outros robôs -->
-                    <li class="nav-item"><a class="nav-link active" href="robo1.html"><i class="fas fa-robot"></i> Robô 1</a></li>
-                    <li class="nav-item"><a class="nav-link" href="robo2.html"><i class="fas fa-robot"></i> Robô 2</a></li>
-                    <!-- Continue com os links até robo15.html -->
-                </ul>
-            </nav>
-        </aside>
+<aside class="col-md-3 col-lg-2 sidebar">
+    <nav>
+        <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link active" href="../index.html"><i class="fas fa-chart-line"></i> Painel Geral</a></li>
+            <li class="nav-item"><a class="nav-link" href="robo1.html"><i class="fas fa-robot"></i> robo 1</a></li>
+            <li class="nav-item"><a class="nav-link" href="robo2.html"><i class="fas fa-robot"></i> robô 2</a></li>
+            <li class="nav-item"><a class="nav-link" href="robo3.html"><i class="fas fa-robot"></i> Robô 3</a></li>
+            <li class="nav-item"><a class="nav-link" href="robo4.html"><i class="fas fa-robot"></i> Robô 4</a></li>
+            <li class="nav-item"><a class="nav-link" href="robo5.html"><i class="fas fa-robot"></i> Robô 5</a></li>
+            <li class="nav-item"><a class="nav-link" href="robo6.html"><i class="fas fa-robot"></i> Robô 6</a></li>
+            <li class="nav-item"><a class="nav-link" href="robo7.html"><i class="fas fa-robot"></i> Robô 7</a></li>
+            <li class="nav-item"><a class="nav-link" href="robo8.html"><i class="fas fa-robot"></i> Robô 8</a></li>
+            <li class="nav-item"><a class="nav-link" href="robo9.html"><i class="fas fa-robot"></i> Robô 9</a></li>
+            <li class="nav-item"><a class="nav-link" href="robo10.html"><i class="fas fa-robot"></i> Robô 10</a></li>
+            <li class="nav-item"><a class="nav-link" href="robo11.html"><i class="fas fa-robot"></i> Robô 11</a></li>
+            <li class="nav-item"><a class="nav-link" href="robo12.html"><i class="fas fa-robot"></i> Robô 12</a></li>
+            <li class="nav-item"><a class="nav-link" href="robo13.html"><i class="fas fa-robot"></i> Robô 13</a></li>
+            <li class="nav-item"><a class="nav-link" href="robo14.html"><i class="fas fa-robot"></i> Robô 14</a></li>
+            <!-- Adicione outros bots aqui conforme necessário -->
+        </ul>
+    </nav>
+</aside>
+<!-- Conteúdo Principal -->
+<main class="col-md-9 col-lg-10 main-content p-4">
+    <header>
+        <h1 class="display-4">Bot 12</h1>
+        <p class="lead">Monitoramento de robôs em tempo real</p>
+    </header>
 
-        <!-- Conteúdo Principal -->
-        <main class="col-md-9 col-lg-10 main-content p-4">
-            <header>
-                <h1 class="display-4">Robô 1</h1>
-                <p class="lead">Informações detalhadas sobre o Robô 1</p>
-            </header>
-
-            <!-- Seção personalizada para cada robô -->
-            <section class="robot-status">
-                <h2>Status do Robô</h2>
-                <p><i class="fas fa-clock"></i> Última atualização: <span class="last-updated">01/11/2024 14:30</span></p>
-                <!-- Adicione detalhes específicos do robô aqui -->
-            </section>
-        </main>
-    </div>
+    <!-- Container do Gráfico -->
+    <section class="chart-container">
+        <h2>Rotina Diaria dos bots</h2>
+        <canvas id="chart"></canvas>
+    </section>
+</main>
+</div>
 </div>
 
-<script src="../scripts.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+<script>
+    // Script para o Gráfico
+    var ctx = document.getElementById('chart').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Jan/17', 'Fev/17', 'Mar/17', 'Abr/17', 'Mai/17', 'Jun/17', 'Jul/17', 'Ago/17', 'Set/17'],
+            datasets: [{
+                label: 'Sinalização do bot',
+                backgroundColor: 'rgba(76, 175, 80, 0.1)',
+                borderColor: 'rgba(76, 175, 80, 1)',
+                data: [2.3, 4.9, 6.8, 10.5, 14.9, 16.9, 18.4, 20.6, 22.9]
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Data'
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Peças'
+                    }
+                }]
+            }
+        }
+    });
+</script>
+
 </body>
 </html>

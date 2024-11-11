@@ -1,183 +1,122 @@
-/* Reset básico */
-* {
+/* Estilização Geral */
+body {
+    background-color: #ffffff; /* Cor de fundo */
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #102f55;
-    color: #9e1212;
-    display: flex;
-   
-    min-height: 100vh;
+.container-fluid {
+    margin-left: 200px;
 }
 
-/* Menu fixo no topo */
+/* Menu Superior */
 .navbar {
-    background-color: #282d34; /* Azul para o menu fixo no topo */
-    color: #ac0000;
+    background-color: #2b2e38;
+    color: #f82a2a;
     padding-top: 8px; /* Aumenta o preenchimento superior */
     padding-bottom: 8px; /* Aumenta o preenchimento inferior */
     font-size: 1em; /* Aumenta o tamanho da fonte */
     font-family: 'Open Sans', sans-serif; /* Aplica a fonte Open Sans */
 }
 
-.navbar a.navbar-brand {
-    color: #702959; /* Cor do texto */
+.navbar-brand {
+    color: #ffffff;
     font-size: 2em; /* Aumenta o tamanho da fonte do "DashBot" */
+    font-weight: bold;
     display: flex;
-    align-items: center; /* Alinha o ícone e o texto no centro */
+    align-items: center;
 }
 
-
-.navbar a.navbar-brand i {
+.navbar-brand i {
     margin-right: 10px; /* Espaço entre o ícone e o texto */
-    font-size: 1.1em; /* Tamanho do ícone */
+    font-size: 1.2em; /* Tamanho do ícone */
+}
+.navbar .navbar-toggler {
+    color: #ffffff; /* Cor do texto e do ícone do menu no topo */
 }
 
 .navbar .navbar-toggler-icon {
     filter: brightness(0) invert(1); /* Ajusta a cor do ícone para branco */
 }
 
-/* Barra lateral */
+/* Barra Lateral */
 .sidebar {
-    background-color: #222831; /* Azul escuro para o menu lateral */
-    color: #05b114;
-    padding: 20px;
+    background-color: #20232d;
     height: 100vh;
-    overflow-y: auto;
-    width: 400px; /* Aumenta a largura da barra lateral */
-}
-
-.sidebar .nav-item {
-    margin: 5px 0;
-    padding: 8px;
-    border-bottom: 1px solid rgba(180, 18, 18, 0.938); /* linha q separa botoes menu lateral*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 70px;
+    color: #b0b3bb;
 }
 
 .sidebar .nav-link {
-    color: #dadada; /* Cor dos links do menu lateral */
+    color: #b0b3bb;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    transition: color 0.3s, background-color 0.3s;
+    font-size: 14px;
 }
 
-.sidebar .nav-link.active {
-    color: #3113b4;
-    background-color: rgba(255, 255, 255, 0.15);
+.sidebar .nav-link i {
+    margin-right: 10px;
 }
 
-/* Conteúdo principal */
-.main-content {
-    flex: 1;
-    padding: 20px;
-}
-
-header h1 {
-    font-size: 24px;
-    margin-bottom: 17px;
-}
-
-header p.lead {
-    font-size: 16px;
-    color: #c01818;
-}
-
-/* Seção dos cards */
-.status-robots {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #d41313;
-    border-radius: 8px;
-}
-
-/* Estilização dos cards de status */
-.card {
-    background-color: #333844;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    color: #791111;
-    transition: transform 0.3s, box-shadow 0.3s;
-    margin-bottom: 20px;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
-}
-
-.card h3 {
-    font-size: 3em;
-    margin: 10px 0;
-    font-weight: bold;
-}
-
-.separator {
-    width: 100%;
-    height: 1px;
-    background-color: #777;
-    margin: 10px 0;
-}
-
-/* Cards com cores de status */
-.bg-success {
-    background: linear-gradient(135deg, #00bb28, #03740c);
-}
-
-.bg-danger {
-    background: linear-gradient(135deg, #e92e2e, #910000);
-}
-
-.bg-secondary {
-    background: linear-gradient(135deg, #9b9b9b, #5f5f5f);
-}
-
-/* Ícones de status nos cards */
-.icon-right {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #ccf3c0;
-}
-
-.bg-danger .icon-right {
-    color: #f3cece;
-}
-
-.bg-secondary .icon-right {
-    color: #e7e5e5;
-}
-
-/* Estilo das listas dentro dos cards */
-.list-card {
-    background-color: #1e1b29;
-    border-radius: 8px;
-    padding: 15px;
-    margin-top: 15px;
-}
-
-.list-card .list-group-item {
-    background-color: #333;
-    color: #d0d0d0;
-    padding: 10px;
-    margin-bottom: 5px;
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover {
+    background-color: #383b47;
+    color: #ffffff;
     border-radius: 5px;
-    transition: background-color 0.3s;
 }
 
-.list-card .list-group-item:hover {
-    background-color: #555;
+/* Conteúdo Principal */
+.main-content {
+    background-color: #1f212b;
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 100vh;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-    .cards-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .card {
-        max-width: 90%;
-    }
+.main-content header h1 {
+    color: #ffffff;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.main-content header p {
+    color: #b0b3bb;
+    font-size: 1.2em;
+}
+
+/* Status do Robô */
+.robot-status h2 {
+    color: #ffffff;
+    font-size: 1.5em;
+    border-bottom: 2px solid #3e4451;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+.robot-status p {
+    color: #b0b3bb;
+    font-size: 1em;
+}
+
+/* Estilização do Painel do Gráfico */
+.chart-container {
+    background-color: #1c44bd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Estilos adicionais para o Gráfico */
+.chart-line {
+    stroke: #4CAF50; /* Cor da linha do gráfico */
+    fill: none;
+    stroke-width: 2;
+    color: #ffffff;
 }

@@ -11,7 +11,7 @@ body {
 
 /* Menu fixo no topo */
 .navbar {
-    background-color: #282d34; /* Azul para o menu fixo no topo */
+    background-color: #1b1f24; /* Azul para o menu fixo no topo */
     color: #ffffff;
     padding-top: 8px; /* Aumenta o preenchimento superior */
     padding-bottom: 8px; /* Aumenta o preenchimento inferior */
